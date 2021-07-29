@@ -1,0 +1,118 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "User is able to request get USD",
+        "description": "",
+        "id": "get-currency;user-is-able-to-request-get-usd",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 181191100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "i am a currency api user",
+            "match": {
+              "arguments": [
+                {
+                  "val": "currency",
+                  "offset": 7
+                }
+              ],
+              "location": "ServiceCallerSteps.iAmApiUser(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2691032900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "i send a get Request for usd exchange rate",
+            "match": {
+              "location": "ServiceCallerSteps.iSendAGetRequestForUsdExchangeRate()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 36199200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "http response code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 29
+                }
+              ],
+              "location": "ServiceCallerSteps.httpResponseCodeShouldBe(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 12645500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "response body should contain GBP",
+            "match": {
+              "arguments": [
+                {
+                  "val": "GBP",
+                  "offset": 29
+                }
+              ],
+              "location": "ServiceCallerSteps.responseBodyShouldContainGBP(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 412859900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "total number of currency returned is 160",
+            "match": {
+              "arguments": [
+                {
+                  "val": "160",
+                  "offset": 37
+                }
+              ],
+              "location": "ServiceCallerSteps.totalNumberOfCurrencyReturnedIs(int)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@getUsd"
+          }
+        ]
+      }
+    ],
+    "name": "Get Currency",
+    "description": "",
+    "id": "get-currency",
+    "keyword": "Feature",
+    "uri": "Currency.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Feature_ExchangeRate"
+      }
+    ]
+  }
+]
